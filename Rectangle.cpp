@@ -1,47 +1,81 @@
+
 #include <iostream>
-class Rectangle {
-private:
-  double length;
-  double breadth;
+using namespace std;
+class Rectangle 
+{ public:
+int Perimeter();
+Rectangle(int l,int b)
+    { cout<<"entered perimeterized constructor"<<endl;
+        flength=l;
+    fbreadth=b;
+    }
 
+
+~Rectangle()
+    { cout<<"entered default destructor"<<endl;
+        
+    }
+    Rectangle()
+    { cout<<"entered default constructor"<<endl;
+        flength=5;
+    fbreadth=5;
+    }
 public:
-  // Default constructor
-  Rectangle() {
-    length = 1.0;
-    breadth = 1.0;
-  }
-
-  // Parameterized constructor
-  Rectangle(double len, double brth) {
-    length = len;
-    breadth = brth;
-  }
-
-  // Function to calculate area
-  double Area() {
-    return length * breadth;
-  }
-
-  // Function to calculate perimeter
-  double Perimeter() {
-    return 2 * (length + breadth);
-  }
+    int flength;
+    int fbreadth;
+    public :
+    int Area() { return flength * fbreadth; }
+    //int Perimeter() { return 2*(flength + fbreadth); }
+    void setLenght(int l)
+    {
+        flength = l;
+    }
+    void setBreadth(int l)
+    {
+        fbreadth = l;
+    }
+    
+    int GetLength()
+    {
+        return flength;
+    }
 };
-
-int main() {
-  // Create a rectangle object with default values
-  Rectangle rect1;
-
-  // Print the area and perimeter of the rectangle
-  std::cout << "Area of rectangle1: " << rect1.Area() << std::endl;
-  std::cout << "Perimeter of rectangle1: " << rect1.Perimeter() << std::endl;
-
-  // Create another rectangle object with specific values
-  Rectangle rect2(5.0, 3.0);
-
-  // Print the area and perimeter of the second rectangle
-  std::cout << "Area of rectangle2: " << rect2.Area() << std::endl;
-  std::cout << "Perimeter of rectangle2: " << rect2.Perimeter() << std::endl;
-
-  return 0;
+int Rectangle::Perimeter(){
+    return 2*(flength+fbreadth);
 }
+int main()
+{
+    Rectangle r;
+   // cout<< "aryan:" << length()<<endl;
+    cout<< "aryan_length:" << r.GetLength()<<endl;
+    cout<< "aryan_breadth:" << r.fbreadth<<endl;
+    int area = r.Area();
+    cout<< "aryan_area:" << r.Area()<<endl;
+
+cout<<"-------------"<<endl;
+{ Rectangle a;
+int flength= 10;
+int fbreadth=5;
+cout<<"aryan_ka_area:"<< a.Area()<<endl;
+cout<<"aryan_ka_length:"<< a.flength<<endl;
+cout<<"aryan_ka_breadth:"<< a.fbreadth<<endl;
+a.setLenght(flength);
+a.setBreadth(fbreadth);
+cout<<"aryan_ka_area:"<< a.Area()<<endl;
+cout<<"aryan_ka_length:"<< a.flength<<endl;
+cout<<"aryan_ka_breadth:"<< a.fbreadth<<endl;
+cout<<"-------------"<<endl;
+Rectangle k(6,8);
+cout<<"aryan_ka_area:"<< k.Area()<<endl;
+cout<<"aryan_ka_length:"<< k.flength<<endl;
+cout<<"aryan_ka_breadth:"<< k.fbreadth<<endl;
+
+cout<<"aaja bhai pls:"<< k.Perimeter()<<endl;
+
+
+
+}
+
+    return 0;
+}
+
