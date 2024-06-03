@@ -28,7 +28,7 @@ class Vector3D
         vect1.fx=fx+vect.fx;
         vect1.fy=fy+vect.fy;
         vect1.fz=fz+vect.fz;
-        return vect;
+        return vect1;
     }
 
     void Print(){cout<<fx<<","<<fy<<","<<fz<<endl;}
