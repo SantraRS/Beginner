@@ -70,7 +70,23 @@ void DelAt(int pos)
         next=temp->sAdd;}
         temp->sAdd=next->sAdd;
     }
+void Rprint(Node *print)
+{
+    int l = Length();
+    if (print->sAdd = = NULL)
+    {
+        print->Print();
+    }
 
+    else
+    {
+        for (int i = 0; i <= l; i++)
+        {
+            print = print->sAdd;
+            Rprint(*print);
+        }
+    }
+}
 
 
 void DelAtStart()
