@@ -122,7 +122,8 @@ int main(){
     cout <<"====================" << endl;
     DelAt(3);
     Print();
-    
+    cout << "====================" << endl;
+    Rprint(&d);
 
 
     return 0;
