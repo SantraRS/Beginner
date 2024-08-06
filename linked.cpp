@@ -72,7 +72,12 @@ void DelAt(int pos)
     }
 void Rprint(Node *print)
 {
-    int l = Length();
+
+    if (print==NULL)
+    {return;}
+    cout<<print->sValue<<" ";
+    Rprint(print->sAdd);
+    /*int l = Length();
     if (print->sAdd = = NULL)
     {
         print->Print();
@@ -85,7 +90,7 @@ void Rprint(Node *print)
             print = print->sAdd;
             Rprint(*print);
         }
-    }
+    }*/
 }
 
 
